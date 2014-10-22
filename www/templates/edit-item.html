@@ -1,0 +1,38 @@
+<ion-view>
+<div class="modal">
+    <ion-header-bar class="bar-secondary">
+        <h1 class="title">Edit contact</h1>
+            <button class="button button-clear button-positive" data-ng-click="closeEditTask()">Cancel</button>
+    </ion-header-bar>
+
+    <ion-content>
+        <form ng-submit="editTask(task)">
+            <div class="list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Nome</span>
+                    <input type="text" placeholder="Nome" ng-model="task.nome">
+                </label>
+                    
+                <label class="item item-input item-floating-label"  >
+                    <span class="input-label">Cognome</span>
+                    <input type="text" placeholder="Cognome" ng-model="task.cognome"> 
+                </label>
+                    
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Indirizzo</span>
+                    <input type="text" placeholder="Indirizzo" ng-model="task.indirizzo">
+                </label>
+
+                <label class="item item-input item-floating-label" >
+                    <span class="input-label">Email</span>
+                   <input type="text" placeholder="Email"  ng-model="task.email" >
+                </label> 
+            </div>
+        
+            <div class="padding">
+                <button type="submit" class="button button-block button-positive">Edit contact</button>
+            </div>
+        </form>
+    </ion-content>
+</div>
+</ion-view>

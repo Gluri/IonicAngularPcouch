@@ -1,0 +1,47 @@
+<ion-view>
+<ion-header-bar class="bar-positive">
+    <h1 class="title">Test App</h1>
+    <button class="button button-icon" data-ng-click="toggleOnline()">
+        <i class="ion-alert icon" data-ng-class="{'ion-connection-bars' : online}"></i>
+    </button>
+    <button class="button button-icon" data-ng-click="new()">
+        <i class="ion-compose icon"></i>
+    </button>
+</ion-header-bar>
+<ion-content>
+    <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" placeholder="Search" data-ng-model="searchText">  
+    </label>
+    <ion-list>
+        <ion-item data-ng-repeat="task in tasks | filter:searchText" class="item-icon-right"
+            data-ng-class="{complete: task.completed}"
+            data-ng-click="completionChanged(task)">
+                <i class="icon ion-ios7-arrow-left"></i>
+                    <div class="row" style="padding:0;">
+                        <i class="icon ion-ios7-arrow-left"></i>
+                        <div class="col col-25">
+                            <small>Cliente</small>
+                            <br />
+                            <small>Indirizzo</small> 
+                            <br />
+                            <small>Email</small> 
+                        </div>
+                        <div class="col col-25">
+                            {{task.nome}} {{task.cognome}}
+                            <br />
+                            {{task.indirizzo}}
+                            <br />
+                            {{task.email}}
+                        </div>
+                    </div>
+                <ion-option-button class="button-energized" data-ng-click="edit($index)">
+                    Edit
+                </ion-option-button>
+                <ion-option-button class="button-assertive" data-ng-click="delete(task)">
+                    Delete
+                </ion-option-button>
+        </ion-item>
+    </ion-list>
+</ion-content>
+</ion-view>

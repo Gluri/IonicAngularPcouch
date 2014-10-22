@@ -1,0 +1,38 @@
+
+<ion-view>
+    <div class="modal">
+        <ion-header-bar class="bar-secondary">
+            <h1 class="title">New contact</h1>
+            <button class="button button-clear button-positive" data-ng-click="closeNewTask()">Cancel</button>
+        </ion-header-bar>
+
+        <ion-content>
+            <form ng-submit="newTask(task)">
+                <div class="list">
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">Nome</span>
+                        <input type="text" placeholder="Nome" data-ng-model="task.nome">
+                    </label>
+    
+                    <label class="item item-input item-floating-label"  >
+                      <span class="input-label">Cognome</span>
+                      <input type="text" placeholder="Cognome" data-ng-model="task.cognome"> 
+                    </label>
+    
+                    <label class="item item-input item-floating-label">
+                      <span class="input-label">Indirizzo</span>
+                      <input type="text" placeholder="Indirizzo" data-ng-model="task.indirizzo">
+                    </label>
+
+                    <label class="item item-input item-floating-label">
+                      <span class="input-label">Email</span>
+                      <input type="text" placeholder="Email" data-ng-model="task.email">
+                    </label>
+                </div>
+                <div class="padding">
+                    <button type="submit" class="button button-block button-positive">Create contact</button>
+                </div>
+            </form>
+        </ion-content>
+    </div>
+</ion-view>
