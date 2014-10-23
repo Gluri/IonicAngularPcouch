@@ -112,6 +112,11 @@ angular.module('pCoachApp.controllers', [])
 
         
         $scope.new = function() {
+            $scope.task= {};
+            $scope.task.nome = "";
+            $scope.task.cognome = "";
+            $scope.task.indirizzo = "";
+            $scope.task.email = "";
             $scope.newModal.show();
         };
 
