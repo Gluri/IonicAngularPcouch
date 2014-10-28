@@ -13,7 +13,7 @@ angular.module('pCoachApp.controllers', [])
         $scope.toggleOnline = function() {
         $scope.online = !$scope.online;
             if ($scope.online) {  
-                $scope.sync = todoDb.sync('http://127.0.0.1:5984/gennaro', {live: true})
+                $scope.sync = todoDb.sync('https://ilbimbocresce.couchappy.com/gennaro', {live: true})
                  //$scope.sync = todoDb.sync('http://etto:danilo@127.0.0.1:5984/gennaro', {live: true})
                     .on('error', function (err) {
                         console.log("Syncing stopped");
